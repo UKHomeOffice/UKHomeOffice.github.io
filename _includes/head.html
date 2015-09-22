@@ -1,12 +1,60 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+    <script type="text/javascript">
+        (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
+    </script>
+
+    <!--[if gt IE 8]><!--><link href="https://alphagov.github.io/govuk_template/assets/stylesheets/govuk-template.css?0.16.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+    <!--[if IE 6]><link href="https://alphagov.github.io/govuk_template/assets/stylesheets/govuk-template-ie6.css?0.16.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 7]><link href="https://alphagov.github.io/govuk_template/assets/stylesheets/govuk-template-ie7.css?0.16.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 8]><link href="https://alphagov.github.io/govuk_template/assets/stylesheets/govuk-template-ie8.css?0.16.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <link href="https://alphagov.github.io/govuk_template/assets/stylesheets/govuk-template-print.css?0.16.0" media="print" rel="stylesheet" type="text/css" />
+
+    <!--[if IE 8]>
+    <script type="text/javascript">
+        (function(){if(window.opera){return;}
+            setTimeout(function(){var a=document,g,b={families:(g=
+                            ["nta"]),urls:["https://alphagov.github.io/govuk_template/assets/stylesheets/fonts-ie8.css?0.16.0"]},
+                    c="https://alphagov.github.io/govuk_template/assets/javascripts/vendor/goog/webfont-debug.js?0.16.0",d="script",
+                    e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+                    ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+                    .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+        })()
+    </script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <link href="https://alphagov.github.io/govuk_template/assets/stylesheets/fonts.css?0.16.0" media="all" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+
+
+    <!--[if lt IE 9]>
+    <script src="https://alphagov.github.io/govuk_template/assets/javascripts/ie.js?0.16.0" type="text/javascript"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="https://alphagov.github.io/govuk_template/assets/images/favicon.ico?0.16.0" type="image/x-icon" />
+
+    <!-- Size for iPad and iPad mini (high resolution) -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://alphagov.github.io/govuk_template/assets/images/apple-touch-icon-152x152.png?0.16.0">
+    <!-- Size for iPhone and iPod touch (high resolution) -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://alphagov.github.io/govuk_template/assets/images/apple-touch-icon-120x120.png?0.16.0">
+    <!-- Size for iPad 2 and iPad mini (standard resolution) -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://alphagov.github.io/govuk_template/assets/images/apple-touch-icon-76x76.png?0.16.0">
+    <!-- Default non-defined size, also used for Android 2.1+ devices -->
+    <link rel="apple-touch-icon-precomposed" href="https://alphagov.github.io/govuk_template/assets/images/apple-touch-icon-60x60.png?0.16.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://alphagov.github.io/govuk_template/assets/images/opengraph-image.png?0.16.0">
+
+
 </head>
