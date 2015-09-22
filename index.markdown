@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Github Repos
+# Open Source Projects
 
 * [Docker](/docker)
 * [Puppet](/puppet)
