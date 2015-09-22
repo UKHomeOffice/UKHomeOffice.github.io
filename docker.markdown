@@ -66,18 +66,19 @@ For your build pipeline
 
 ### Depreciated
 
-* UKHomeOffice/docker-gradle use UKHomeOffice/docker-openjdk8-gradle
-* UKHomeOffice/docker-fedora-baseservices use UKHomeOffice/docker-centos-base
+* [UKHomeOffice/docker-gradle](https://github.com/UKHomeOffice/docker-gradle) use [UKHomeOffice/docker-openjdk8-gradle](https://github.com/UKHomeOffice/docker-openjdk8-gradle)
+* [UKHomeOffice/docker-fedora-baseservices](https://github.com/UKHomeOffice/docker-fedora-baseservices) use [UKHomeOffice/docker-centos-base](https://github.com/UKHomeOffice/docker-centos-base)
 
-### Broken
+### Broken - No plans to Fix
 
-* UKHomeOffice/docker-aws-drupal
+* [UKHomeOffice/docker-aws-drupal](https://github.com/UKHomeOffice/docker-aws-drupal)
 
 ### No unclear/documentation - Use at your own risk
-* UKHomeOffice/docker-php-fpm
-* UKHomeOffice/docker-gitlab-tools
-* UKHomeOffice/docker-nginx-gateway
-* UKHomeOffice/docker-crond
-* UKHomeOffice/docker_s3registry
-* UKHomeOffice/docker-confluence
-* UKHomeOffice/docker-logstash-s3
+
+* [UKHomeOffice/docker-php-fpm](https://github.com/UKHomeOffice/docker-php-fpm)
+* [UKHomeOffice/docker-gitlab-tools](https://github.com/UKHomeOffice/docker-gitlab-tools)
+* [UKHomeOffice/docker-nginx-gateway](https://github.com/UKHomeOffice/docker-nginx-gateway)
+* [UKHomeOffice/docker-crond](https://github.com/UKHomeOffice/docker-crond)
+* [UKHomeOffice/docker_s3registry](https://github.com/UKHomeOffice/docker_s3registry)
+* [UKHomeOffice/docker-confluence](https://github.com/UKHomeOffice/docker-confluence)
+* [UKHomeOffice/docker-logstash-s3](https://github.com/UKHomeOffice/docker-logstash-s3)
