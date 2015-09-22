@@ -29,7 +29,7 @@ These are docker containers we are actively keeping up to date.
 
 ### Programming Language Containers
 
-Containers for specific languages of frameworks
+Containers for specific languages and frameworks
 
 * [UKHomeOffice/docker-nodejs: Node.JS On Build Container](https://github.com/UKHomeOffice/docker-nodejs)
 * [UKHomeOffice/docker-openjdk8: docker-openjdk8](https://github.com/UKHomeOffice/docker-openjdk8)
