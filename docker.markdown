@@ -73,7 +73,7 @@ For your build pipeline
 
 * [UKHomeOffice/docker-aws-drupal](https://github.com/UKHomeOffice/docker-aws-drupal)
 
-### No unclear/documentation - Use at your own risk
+### No/unclear documentation - Use at your own risk
 
 * [UKHomeOffice/docker-php-fpm](https://github.com/UKHomeOffice/docker-php-fpm)
 * [UKHomeOffice/docker-gitlab-tools](https://github.com/UKHomeOffice/docker-gitlab-tools)
