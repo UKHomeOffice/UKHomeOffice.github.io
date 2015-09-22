@@ -4,7 +4,7 @@ title:  "Published Sites"
 permalink: /published/
 ---
 
-## BRP - British Residency Permit Application
+## BRP - Biometric residence permit
 
 * [UKHomeOffice/brp_app](https://github.com/UKHomeOffice/brp_app)
 
