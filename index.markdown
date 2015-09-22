@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Open Source Projects
+# Home Office: Open Source Projects
 
 * [Docker](/docker)
 * [Puppet](/puppet)
