@@ -43,6 +43,7 @@ Containers for specific languages and frameworks
 Store Data
 
 * [UKHomeOffice/docker-mysql: Docker MySQL Container](https://github.com/UKHomeOffice/docker-mysql)
+* [UKHomeOffice/docker-mysql-maintenance: Docker MySQL Maintenance Container](https://github.com/UKHomeOffice/docker-mysql-maintenance)
 * [UKHomeOffice/docker-mysql-java: Docker MySQL Java Container](https://github.com/UKHomeOffice/docker-mysql-java)
 * [UKHomeOffice/docker-mysql-java-jdk: docker-mysql-java](https://github.com/UKHomeOffice/docker-mysql-java-jdk)
 * [UKHomeOffice/docker-mongonodejava8: docker-mongonodejava8](https://github.com/UKHomeOffice/docker-mongonodejava8)
