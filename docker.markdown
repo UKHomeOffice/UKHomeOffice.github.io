@@ -84,6 +84,7 @@ Store Data
 #### SonarQube
 
 * [UKHomeOffice/docker-sonarqube: Docker Sonar Qube](https://github.com/UKHomeOffice/docker-sonarqube)
+* [UKHomeOffice/docker-sonar-mysql-maintenance: docker-mysql-sonarqube](https://github.com/UKHomeOffice/docker-sonar-mysql-maintenance)
 * [UKHomeOffice/docker-mysql-sonarqube: docker-mysql-sonarqube](https://github.com/UKHomeOffice/docker-mysql-sonarqube)
 
 ### Jenkins & Slaves
