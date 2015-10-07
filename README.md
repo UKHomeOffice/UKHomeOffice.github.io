@@ -1,5 +1,7 @@
 # UKHomeOffice.github.io
 
+[![Build Status](https://travis-ci.org/UKHomeOffice/UKHomeOffice.github.io.svg?branch=master)](https://travis-ci.org/UKHomeOffice/UKHomeOffice.github.io)
+
 GitHub pages site for the Home Office Digital team summarising what has been open sourced.
 
 It uses [Jekyll](https://jekyllrb.com/), see there for more usage documentation
