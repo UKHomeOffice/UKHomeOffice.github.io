@@ -12,3 +12,10 @@ permalink: /dev-tools/
 * [UKHomeOffice/rtp-test-lib: Scala testing functionality for general use](https://github.com/UKHomeOffice/rtp-test-lib)
 * [UKHomeOffice/rtp-akka-lib: Akka reusable functionality and Scala Spray functionality/template for general use.](https://github.com/UKHomeOffice/rtp-akka-lib)
 * [UKHomeOffice/rtp-integration-service-stub: Scala publish/subscribe JSON API for RabbitMQ](https://github.com/UKHomeOffice/rtp-integration-service-stub)
+
+### Java
+
+#### Email Templating API
+
+* [UKHomeOffice/email-api](https://github.com/UKHomeOffice/email-api)
+* [UKHomeOffice/email-api-client-java](https://github.com/UKHomeOffice/email-api-client-java)
