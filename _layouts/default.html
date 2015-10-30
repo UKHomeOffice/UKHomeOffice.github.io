@@ -168,7 +168,7 @@
           paragraph.appendChild(document.createElement("br"));
         }
 
-        paragraph.appendChild(document.createTextNode("Last Updated: " + moment(repo.updated_at).fromNow()));
+        paragraph.appendChild(document.createTextNode("Last Updated: " + moment(repo.pushed_at ? repo.pushed_at : repo.created_at).fromNow()));
         container.appendChild(paragraph);
       })
     }
