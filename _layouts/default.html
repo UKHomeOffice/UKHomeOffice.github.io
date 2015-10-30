@@ -11,14 +11,168 @@
 
 {% include header.html %}
 
+
+
 <div id="content" role="main">
-  {{ content }}
+  <h1 id="home-office-open-source-projects">Home Office: Open Source Projects</h1>
+
+  <div id="intro">
+    {{ content }}
+  </div>
+
 </div>
 
 {% include footer.html %}
 
 <script src="https://alphagov.github.io/govuk_template/assets/javascripts/govuk-template.js?0.16.0" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdn.rawgit.com/michael/github/master/github.js"></script>
+<script>
+  var repos;
 
 
+  var Repos = function (rawRepos) {
+    repos = rawRepos;
+
+    this.getCategorisedRepos = function () {
+      repos.sort();
+
+      var buckets = {};
+      var other = [];
+
+      repos.forEach(function (item) {
+
+        if (item.name.indexOf('-') > 0) {
+          var category = item.name.split("-", 1).pop();
+          if (!Array.isArray(buckets[category])) {
+            buckets[category.toLowerCase()] = [];
+          }
+
+          buckets[category.toLowerCase()].push(item);
+        } else {
+          other.push(item);
+        }
+      });
+
+      for (var categoryKey in buckets) {
+        if (buckets[categoryKey].length == 1) {
+          other.push(buckets[categoryKey].pop());
+          delete buckets[categoryKey];
+        }
+      }
+
+      var keys = Object.keys(buckets);
+      var len = keys.length;
+      keys.sort();
+      var sortedBucked = {};
+
+
+      for (var i = 0; i < len; i++) {
+        var k = keys[i];
+        sortedBucked[k] = buckets[k];
+      }
+
+      sortedBucked["-"] = other;
+
+      return sortedBucked;
+    };
+  };
+
+  var github = new Github({
+
+  });
+
+  github.getUser().orgRepos('UKHomeOffice', function (err, repos) {
+    if (err) console.log(err);
+
+    repos = repos.filter(function (element, index, array) {
+      return !element.private
+    })
+
+    var repos = new Repos(repos);
+    var categorisedRepos = repos.getCategorisedRepos();
+
+    var heading = document.createElement("h2");
+    var node = document.createTextNode("Categories");
+    heading.appendChild(node);
+
+    var container = document.getElementById("content");
+    container.appendChild(heading);
+
+    var categories = document.createElement("ul");
+
+    for (var category in categorisedRepos) {
+      if (category == "-") {
+        var anchor = document.createElement("a");
+        anchor.setAttribute("href", "#other");
+        anchor.appendChild(document.createTextNode("Other"));
+      } else {
+        var anchor = document.createElement("a");
+        anchor.setAttribute("href", "#" + category.toLowerCase());
+        anchor.appendChild(document.createTextNode(category.charAt(0).toUpperCase() + category.slice(1)));
+      }
+
+      var listItem = document.createElement("li");
+      listItem.appendChild(anchor);
+      categories.appendChild(listItem)
+    }
+
+    container.appendChild(categories);
+
+    for (var category in categorisedRepos) {
+
+      if (category == "-") {
+        var heading = document.createElement("h2");
+        heading.id = "other"
+        heading.appendChild(document.createTextNode("Other"));
+        container.appendChild(heading);
+      } else {
+        var heading = document.createElement("h2");
+        heading.id = category.toLowerCase()
+        heading.appendChild(document.createTextNode(category.charAt(0).toUpperCase() + category.slice(1)));
+        container.appendChild(heading);
+      }
+
+      categorisedRepos[category].forEach(function (repo) {
+        var heading = document.createElement("h3");
+        heading.appendChild(document.createTextNode(repo.full_name));
+        container.appendChild(heading);
+
+        if (repo.description != null && repo.description) {
+          var paragraph = document.createElement("p");
+          paragraph.appendChild(document.createTextNode(repo.description));
+          container.appendChild(paragraph);
+        }
+
+        var paragraph = document.createElement("p");
+        if (repo.homepage != null && (repo.homepage)) {
+          paragraph.appendChild(document.createTextNode("Home page: "));
+          var anchor = document.createElement("a");
+          anchor.setAttribute("href", repo.homepage);
+          anchor.appendChild(document.createTextNode(repo.homepage));
+          paragraph.appendChild(anchor)
+
+          paragraph.appendChild(document.createElement("br"));
+        }
+
+        paragraph.appendChild(document.createTextNode("GitHub: "));
+        var anchor = document.createElement("a");
+        anchor.setAttribute("href", repo.url);
+        anchor.appendChild(document.createTextNode(repo.full_name));
+        paragraph.appendChild(anchor)
+        paragraph.appendChild(document.createElement("br"));
+
+        if (repo.language != null) {
+          paragraph.appendChild(document.createTextNode("Language: " + repo.language));
+          paragraph.appendChild(document.createElement("br"));
+        }
+
+        paragraph.appendChild(document.createTextNode("Last Updated: " + moment(repo.updated_at).fromNow()));
+        container.appendChild(paragraph);
+      })
+    }
+  });
+</script>
 </body>
 </html>
