@@ -158,7 +158,7 @@
 
         paragraph.appendChild(document.createTextNode("GitHub: "));
         var anchor = document.createElement("a");
-        anchor.setAttribute("href", repo.url);
+        anchor.setAttribute("href", repo.html_url);
         anchor.appendChild(document.createTextNode(repo.full_name));
         paragraph.appendChild(anchor)
         paragraph.appendChild(document.createElement("br"));
